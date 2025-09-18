@@ -1,7 +1,7 @@
 {
 	"__inputs": [
 	  {
-		"name": "DS_PROMETHEUS",
+		"name": "Prometheus",
 		"label": "Prometheus",
 		"description": "",
 		"type": "datasource",
@@ -94,7 +94,7 @@
 	  {
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"fieldConfig": {
 		  "defaults": {
@@ -159,7 +159,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "max(max_over_time(dragonfly_uptime_in_seconds{namespace=\"$namespace\",pod=~\"$instance\"}[$__interval]))",
@@ -178,7 +178,7 @@
 	  {
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"fieldConfig": {
 		  "defaults": {
@@ -245,7 +245,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "dragonfly_connected_clients{namespace=\"$namespace\",pod=~\"$instance\"}",
@@ -265,7 +265,7 @@
 	  {
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"fieldConfig": {
 		  "defaults": {
@@ -336,7 +336,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "100 * (dragonfly_memory_used_bytes{namespace=\"$namespace\",pod=~\"$instance\"}  / dragonfly_memory_max_bytes{namespace=\"$namespace\",pod=~\"$instance\"} )",
@@ -356,7 +356,7 @@
 	  {
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"fieldConfig": {
 		  "defaults": {
@@ -406,7 +406,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"disableTextWrap": false,
 			"editorMode": "code",
@@ -431,7 +431,7 @@
 		"dashes": false,
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"editable": true,
 		"error": false,
@@ -482,7 +482,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"editorMode": "code",
 			"exemplar": true,
@@ -540,7 +540,7 @@
 		"dashes": false,
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"editable": true,
 		"error": false,
@@ -592,7 +592,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "dragonfly_memory_used_bytes{namespace=\"$namespace\",pod=~\"$instance\"} ",
@@ -608,7 +608,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "dragonfly_memory_max_bytes{namespace=\"$namespace\",pod=~\"$instance\"} ",
@@ -660,7 +660,7 @@
 		"dashes": false,
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"editable": true,
 		"error": false,
@@ -710,7 +710,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "rate(dragonfly_net_input_bytes_total{namespace=\"$namespace\",pod=~\"$instance\"}[5m])",
@@ -724,7 +724,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "rate(dragonfly_net_output_bytes_total{namespace=\"$namespace\",pod=~\"$instance\"}[5m])",
@@ -774,7 +774,7 @@
 		"dashes": false,
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"editable": true,
 		"error": false,
@@ -826,7 +826,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "sum (dragonfly_db_keys{namespace=\"$namespace\",pod=~\"$instance\"}) by (db)",
@@ -877,7 +877,7 @@
 		"dashes": false,
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"editable": true,
 		"error": false,
@@ -927,7 +927,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "sum (dragonfly_db_keys{namespace=\"$namespace\",pod=~\"$instance\"}) - sum (dragonfly_db_keys_expiring{namespace=\"$namespace\",pod=~\"$instance\"}) ",
@@ -942,7 +942,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "sum (dragonfly_db_keys_expiring{namespace=\"$namespace\",pod=~\"$instance\"})",
@@ -989,7 +989,7 @@
 	  {
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"fieldConfig": {
 		  "defaults": {
@@ -1067,7 +1067,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"disableTextWrap": false,
 			"editorMode": "code",
@@ -1091,7 +1091,7 @@
 		"dashes": false,
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"fieldConfig": {
 		  "defaults": {
@@ -1139,7 +1139,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "dragonfly_connected_clients{namespace=\"$namespace\",pod=\"$instance\"}",
@@ -1189,7 +1189,7 @@
 		"dashes": false,
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"editable": true,
 		"error": false,
@@ -1239,7 +1239,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"editorMode": "code",
 			"exemplar": true,
@@ -1257,7 +1257,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"editorMode": "code",
 			"expr": "rate(dragonfly_keyspace_misses_total{namespace=\"$namespace\",pod=~\"$instance\"}[5m])",
@@ -1318,7 +1318,7 @@
 		"dashes": false,
 		"datasource": {
 		  "type": "prometheus",
-		  "uid": "${DS_PROMETHEUS}"
+		  "uid": "Prometheus"
 		},
 		"editable": true,
 		"error": false,
@@ -1373,7 +1373,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "sum(rate(dragonfly_expired_keys_total{namespace=\"$namespace\",pod=~\"$instance\"}[5m])) by (instance)",
@@ -1390,7 +1390,7 @@
 		  {
 			"datasource": {
 			  "type": "prometheus",
-			  "uid": "${DS_PROMETHEUS}"
+			  "uid": "Prometheus"
 			},
 			"exemplar": true,
 			"expr": "sum(rate(dragonfly_evicted_keys_total{namespace=\"$namespace\",pod=~\"$instance\"}[5m])) by (instance)",
@@ -1465,7 +1465,7 @@
 		  "current": {},
 		  "datasource": {
 			"type": "prometheus",
-			"uid": "${DS_PROMETHEUS}"
+			"uid": "Prometheus"
 		  },
 		  "definition": "label_values(dragonfly_uptime_in_seconds,app)",
 		  "hide": 0,
@@ -1488,7 +1488,7 @@
 		  "current": {},
 		  "datasource": {
 			"type": "prometheus",
-			"uid": "${DS_PROMETHEUS}"
+			"uid": "Prometheus"
 		  },
 		  "definition": "label_values(dragonfly_uptime_in_seconds{app=\"$Dragonfly\"},namespace)",
 		  "hide": 0,
@@ -1511,7 +1511,7 @@
 		  "current": {},
 		  "datasource": {
 			"type": "prometheus",
-			"uid": "${DS_PROMETHEUS}"
+			"uid": "Prometheus"
 		  },
 		  "definition": "label_values(dragonfly_uptime_in_seconds{app=\"$Dragonfly\",namespace=\"$namespace\"},pod)",
 		  "hide": 0,
